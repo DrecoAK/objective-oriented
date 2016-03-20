@@ -11,10 +11,13 @@ package sistemasinteligentes1;
  */
 public class Agente {
     
-    String qf;
+    private String[] q;
+    private float[][] pesoCaminhos;
+    private String qf;
+    private String qi;
 
-    public Agente(String qf) {
-        this.qf = qf;
+    public Agente() {
+        
     }
     
 }
