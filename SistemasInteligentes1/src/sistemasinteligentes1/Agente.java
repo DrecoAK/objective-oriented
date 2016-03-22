@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 public class Agente {
     
-    private Estado qi, qf, qa;
+    private Estado estadoInicial, estadoFinal, estadoAtual;
     private EspacoEstados es;
 
     public Agente(EspacoEstados es)
@@ -16,17 +16,16 @@ public class Agente {
         this.es = es;
     }
     
-    public void perceber(EspacoEstados es, Estado qi,Estado qf)
+    public void perceber()
     {
-        this.es = es;
-        this.qi = qi;
-        this.qf = qf;
+        this.estadoInicial = es.getEstadoInicial();
+        this.estadoFinal = es.getEstadoFinal();
     }
    
     public void perceber(Estado qi, Estado qf)
     {
-        this.qi = qi;
-        this.qf = qf;
+        this.estadoInicial = qi;
+        this.estadoFinal = qf;
     }
     
     public void perceber(EspacoEstados es)
@@ -43,5 +42,10 @@ public class Agente {
     // executar ação no ambiente (em resposta a uma ação, o ambiente deve mudar de estado)
     public void executar()
     {
+    }
+    
+    public void mostrarCrencaProblema()
+    {
+
     }
 }

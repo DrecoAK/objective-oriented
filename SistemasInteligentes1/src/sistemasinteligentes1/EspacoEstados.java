@@ -8,17 +8,34 @@ import java.util.ArrayList;
  */
 public class EspacoEstados
 {
-    private ArrayList<Estado> estados = new ArrayList<Estado>();
-    private ArrayList<Aresta> arestas = new ArrayList<Aresta>();
+    private ArrayList<Estado> estados;
+    private ArrayList<Aresta> arestas;
+    private Estado estadoInicial;
+    private Estado estadoFinal;
     
-    public EspacoEstados(ArrayList<Estado> estados, ArrayList<Aresta> arestas)
+    public EspacoEstados(ArrayList<Estado> estados, ArrayList<Aresta> arestas, Estado i, Estado f)
     {
         this.estados = estados;
         this.arestas = arestas;
+        this.estadoInicial = i;
+        this.estadoFinal = f;
+    }
+
+    public ArrayList<Estado> getEstados() {
+        return estados;
+    }
+
+    public ArrayList<Aresta> getArestas() {
+        return arestas;
+    }
+
+    public Estado getEstadoInicial() {
+        return estadoInicial;
+    }
+
+    public Estado getEstadoFinal() {
+        return estadoFinal;
     }
     
-    // codificar o resto (seja lá o que for)
     
-    // a solução deve ser no formato de uma sequência de ações...
-    // então criar uma classe "Acao" será?
 }

@@ -37,12 +37,9 @@ public class Main
         arestas.add(mb);
         arestas.add(ba);
         
-        EspacoEstados es = new EspacoEstados(estados, arestas);
+        EspacoEstados es = new EspacoEstados(estados, arestas, p, a);
         
         Agente agente = new Agente(es);
         
-        agente.perceber(p, a);
-        
-        agente.deliberar();
     }
 }
