@@ -10,7 +10,6 @@ public class Main
 {
     public static void main(String[] args)
     {
-        
         Estado p = new Estado("Portal da Graciosa");
         Estado s = new Estado("São João");
         Estado b = new Estado("Bufara");
@@ -41,5 +40,9 @@ public class Main
         
         Agente agente = new Agente(es);
         
+        // teste
+        agente.perceber(es);
+        agente.deliberar();
+        agente.executar();
     }
 }
