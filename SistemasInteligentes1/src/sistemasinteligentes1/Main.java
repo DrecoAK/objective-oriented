@@ -22,14 +22,14 @@ public class Main
         Aresta mb = new Aresta(m, b, 7.0, 8, true);
         Aresta ba = new Aresta(b, a, 6.9, 8, true);
         
-        ArrayList<Estado> estados = new ArrayList<Estado>();
+        ArrayList<Estado> estados = new ArrayList<>();
         estados.add(p);
         estados.add(s);
         estados.add(b);
         estados.add(m);
         estados.add(a);
         
-        ArrayList<Aresta> arestas = new ArrayList<Aresta>();
+        ArrayList<Aresta> arestas = new ArrayList<>();
         arestas.add(ps);
         arestas.add(sb);
         arestas.add(sm);
@@ -42,7 +42,9 @@ public class Main
         
         // teste
         agente.perceber(es);
+        agente.mostrarCrencaProblema();
         agente.deliberar();
         agente.executar();
+        
     }
 }

@@ -17,4 +17,9 @@ public class Estado
     {
         return nome;
     }
+    
+    @Override
+    public String toString(){
+        return nome;
+    }
 }

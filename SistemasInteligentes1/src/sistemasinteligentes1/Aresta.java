@@ -69,4 +69,15 @@ public class Aresta
     {
         this.idaVolta = idaVolta;
     }
+    
+    @Override
+    public String toString(){
+        String resposta = ("Aresta conectando as Cidades " + this.origem.getNome() + " e " + this.destino.getNome() + 
+                " de tamanho " + this.distancia + " e com tempo de percurso de " + this.tempo + ". ");
+        if(idaVolta)
+            resposta = resposta + "Esta aresta permite fluxo em ambos os sentidos!";
+        else
+            resposta = resposta + "Esta aresta não permite fluxo em ambos os sentidos!";
+        return resposta;
+    }
 }

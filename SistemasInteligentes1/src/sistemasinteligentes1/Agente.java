@@ -17,6 +17,7 @@ public class Agente {
     public Agente(EspacoEstados es)
     {
         this.es = es;
+        this.perceber();
         atual = es.getEstadoInicial();
     }
     
@@ -24,12 +25,6 @@ public class Agente {
     {
         this.qi = es.getEstadoInicial();
         this.qf = es.getEstadoFinal();
-    }
-   
-    public void perceber(Estado qi, Estado qf)
-    {
-        this.qi = qi;
-        this.qf = qf;
     }
     
     public void perceber(EspacoEstados es)
@@ -80,6 +75,20 @@ public class Agente {
     
     public void mostrarCrencaProblema()
     {
-
+        this.es.imprimirEspaco();
+    }
+    
+    public void mostrarCrencaEstadoAtual(){
+        System.out.println("Eu atualmente me encontro em: " + atual +".");
+    }
+    
+    public void mostrarCrencaSolucao(){
+        if(!solucao.isEmpty()){    
+            System.out.println("A solução atual, partindo do meu estado atual, é composta pelas seguintes arestas:");
+            for (int i = 0; i < solucao.size(); i++)
+                System.out.println(solucao.get(i));
+        }
+        else
+            System.out.println("A solução está vazia, ou o agente ainda não deliberou sobre o problema... ou ele já resolveu o problema e alcançou o objetivo!");
     }
 }
