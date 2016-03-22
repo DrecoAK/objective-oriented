@@ -10,6 +10,7 @@ public class Agente {
     
     private Estado estadoInicial, estadoFinal, estadoAtual;
     private EspacoEstados es;
+    private ArrayList<Aresta> seq = new ArrayList<Aresta>();
 
     public Agente(EspacoEstados es)
     {
@@ -36,7 +37,7 @@ public class Agente {
     // escolha da próxima ação
     public void deliberar()
     {
-        
+        ArrayList<Aresta> allArestas = es.getArestas();
     }
     
     // executar ação no ambiente (em resposta a uma ação, o ambiente deve mudar de estado)
